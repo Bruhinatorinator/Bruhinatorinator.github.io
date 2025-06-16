@@ -1,0 +1,74 @@
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    overflow: hidden;
+}
+
+.video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Overlay for better text readability */
+.video-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2); /* Adjust opacity as needed */
+    z-index: -1;
+}
+
+/* Fallback gradient if video fails */
+.video-background.fallback {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+}
+
+/* Ensure content appears above video */
+body.has-video-bg {
+    position: relative;
+    z-index: 1;
+    color: #fff; /* Default white text for dark video background */
+}
+
+/* Text shadows for better readability on video background */
+body.has-video-bg h1,
+body.has-video-bg h2,
+body.has-video-bg h3,
+body.has-video-bg h4,
+body.has-video-bg h5,
+body.has-video-bg h6 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+body.has-video-bg p {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Loading state for video */
+.video-background.loading::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    z-index: 1;
+}
+
+/* Smooth transition when video loads */
+.video-background video {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.video-background video.loaded {
+    opacity: 1;
+}

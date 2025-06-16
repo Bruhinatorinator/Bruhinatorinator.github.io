@@ -1,0 +1,306 @@
+/* Home Page Specific Styles */
+
+/* Main Content Container */
+.main-content {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* Hero Section */
+.hero-section {
+    max-width: 1200px;
+    width: 100%;
+    padding: 2rem 0;
+}
+
+/* Introduction Section */
+.intro-section {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 4rem;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.intro-text {
+    color: #fff;
+}
+
+.intro-text h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #fff;
+    text-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.5),
+        0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.intro-text .subtitle {
+    font-size: 1.4rem;
+    color: #ffdd59;
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.intro-text p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #f0f0f0;
+    margin-bottom: 1.2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Portrait Image */
+.portrait-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.portrait-image {
+    width: 300px;
+    height: 375px;
+    border-radius: 20px;
+    object-fit: cover;
+    border: 4px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.4),
+        0 0 0 1px rgba(255, 255, 255, 0.2),
+        0 0 30px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portrait-image:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 
+        0 25px 50px rgba(0, 0, 0, 0.5),
+        0 0 0 1px rgba(255, 255, 255, 0.3),
+        0 0 40px rgba(255, 255, 255, 0.2);
+}
+
+/* Placeholder for image */
+.image-placeholder {
+    width: 300px;
+    height: 375px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.1rem;
+    text-align: center;
+    border: 4px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.3),
+        0 0 0 1px rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Call to Action Section */
+.cta-section {
+    text-align: center;
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+    padding-top: 3rem;
+}
+
+.cta-title {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    text-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.5),
+        0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.cta-subtitle {
+    font-size: 1.2rem;
+    color: #f0f0f0;
+    margin-bottom: 2.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Navigation Links Grid */
+.nav-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.nav-card {
+    background: linear-gradient(135deg, 
+        rgba(30, 60, 114, 0.8), 
+        rgba(42, 82, 152, 0.8)
+    );
+    color: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 
+        0 15px 30px rgba(0, 0, 0, 0.3),
+        0 0 0 1px rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.nav-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(255, 255, 255, 0.15), 
+        transparent
+    );
+    transition: left 0.5s;
+}
+
+.nav-card:hover::before {
+    left: 100%;
+}
+
+.nav-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.4),
+        0 0 0 1px rgba(255, 255, 255, 0.2),
+        0 0 30px rgba(255, 255, 255, 0.1);
+}
+
+.nav-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.nav-card p {
+    font-size: 1.1rem;
+    opacity: 0.95;
+    line-height: 1.6;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.nav-card .icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+/* Responsive Design */
+@media screen and (max-width: 968px) {
+    .intro-section {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 3rem;
+    }
+
+    .intro-text h1 {
+        font-size: 3rem;
+    }
+
+    .main-content {
+        padding: 1.5rem;
+    }
+
+    .portrait-image,
+    .image-placeholder {
+        width: 280px;
+        height: 350px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main-content {
+        padding: 1rem;
+    }
+
+    .intro-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .intro-text .subtitle {
+        font-size: 1.2rem;
+    }
+
+    .intro-text p {
+        font-size: 1.1rem;
+    }
+
+    .cta-title {
+        font-size: 2rem;
+    }
+
+    .nav-links {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .nav-card {
+        padding: 2rem;
+    }
+
+    .portrait-image,
+    .image-placeholder {
+        width: 250px;
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-section {
+        padding: 1rem 0;
+    }
+
+    .intro-text h1 {
+        font-size: 2rem;
+    }
+
+    .intro-text .subtitle {
+        font-size: 1.1rem;
+    }
+
+    .intro-text p {
+        font-size: 1rem;
+    }
+
+    .cta-title {
+        font-size: 1.8rem;
+    }
+
+    .portrait-image,
+    .image-placeholder {
+        width: 220px;
+        height: 280px;
+    }
+
+    .nav-card {
+        padding: 1.5rem;
+    }
+
+    .nav-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .nav-card p {
+        font-size: 1rem;
+    }
+}
