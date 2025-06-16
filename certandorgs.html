@@ -1,38 +1,687 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Justine Bernard J. Lagasca</title>
-    <!-- Google Fonts - Add these BEFORE your CSS files -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Certifications & Organizations - Justine Bernard J. Lagasca</title>
 
-    <link rel="stylesheet" href="css/global.css">
-    
-    <!-- Component styles -->
-    <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/video.css">
-    
-</head>
-<body>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/video.css" />
+    <link rel="stylesheet" href="css/certandorg.css" />
+  </head>
+  <body class="has-video-bg">
+    <!-- Video Background -->
     <div class="video-background">
-        <video autoplay muted loop id="bg-video">
-            <source src="assets/ocean-loop.mp4" type="video/mp4">
-        </video>
+      <video autoplay muted loop id="bg-video">
+        <source src="assets/ocean-loop.mp4" type="video/mp4" />
+      </video>
     </div>
-    
-    <!-- Light overlay for better text readability on royal blue video -->
+
+    <!-- Video Overlay -->
     <div class="video-overlay"></div>
-   <div id="navbar-container"></div>
+
+    <!-- Navbar -->
+    <div id="navbar-container"></div>
 
     <!-- Main Content -->
-    <main style="padding: 2rem;">
-        <h1>This is the Certifications page</h1>
-        <p>I'm hosted with GitHub Pages.</p>
+    <main class="main-content">
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="container">
+          <div class="hero-content">
+            <h1>Certifications & Achievements</h1>
+            <p class="hero-subtitle">Professional Development & Leadership Excellence</p>
+            <p class="hero-description">
+              A showcase of my continuous learning journey, leadership experiences, and competitive achievements in
+              technology and beyond.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Statistics Overview -->
+      <section class="stats-overview">
+        <div class="container">
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-icon">🏆</div>
+              <div class="stat-number">12</div>
+              <div class="stat-label">Certificates</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">👥</div>
+              <div class="stat-number">2</div>
+              <div class="stat-label">Leadership Roles</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">🥇</div>
+              <div class="stat-number">3</div>
+              <div class="stat-label">Competition Awards</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Certifications Section -->
+      <section class="certifications">
+        <div class="container">
+          <div class="section-header">
+            <h2>Professional Certifications</h2>
+            <p>Continuous learning and skill development in technology and business</p>
+          </div>
+
+          <div class="certifications-grid">
+            <!-- Certificate 1 -->
+            <div class="cert-card">
+              <div class="cert-image">
+                <img
+                  src="assets/SysAdCert.png"
+                  alt="Certificate Name"
+                  class="cert-image"
+                  onclick="openCertModal(this)"
+                />
+              </div>
+              <div class="cert-content">
+                <h3>Systems Administration</h3>
+                <p class="cert-issuer">STI</p>
+                <p class="cert-date">June 2022</p>
+                <p class="cert-description">
+                  This certification demonstrates proficiency in systems administration, including managing servers,
+                  configuring networks, and ensuring IT infrastructure reliability and security. As well as handling
+                  cloud networks.
+                </p>
+                <div class="cert-skills">
+                  <span class="skill-tag">Network Configuration</span>
+                  <span class="skill-tag">Server Management</span>
+                  <span class="skill-tag">Troubleshooting</span>
+                  <span class="skill-tag">Security</span>
+                  <span class="skill-tag">Cloud Networking</span>
+                  <span class="skill-tag">Monitoring</span>
+                  <span class="skill-tag">Backup & Recovery</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Certificate 2 -->
+            <div class="cert-card">
+              <div class="cert-image">
+                <img
+                  src="assets/JavaCert.png"
+                  alt="Certificate Name"
+                  class="cert-image"
+                  onclick="openCertModal(this)"
+                />
+              </div>
+              <div class="cert-content">
+                <h3>Java Foundations</h3>
+                <p class="cert-issuer">Oracle</p>
+                <p class="cert-date">June 2022</p>
+                <p class="cert-description">
+                  This certification validates foundational knowledge of Java programming, including object-oriented
+                  concepts, syntax, and application development. It demonstrates the ability to write, debug, and
+                  maintain Java applications.
+                </p>
+                <div class="cert-skills">
+                  <span class="skill-tag">Java Programming</span>
+                  <span class="skill-tag">OOP</span>
+                  <span class="skill-tag">Problem Solving</span>
+                  <span class="skill-tag">Debugging</span>
+                  <span class="skill-tag">Application Development</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Certificate 3 -->
+            <div class="cert-card">
+              <div class="cert-image">
+                <img
+                  src="assets/HackingCert.png"
+                  alt="Certificate Name"
+                  class="cert-image"
+                  onclick="openCertModal(this)"
+                />
+              </div>
+              <div class="cert-content">
+                <h3>Ethical Hacking</h3>
+                <p class="cert-issuer">Happy S. Rafols</p>
+                <p class="cert-date">June 2021</p>
+                <p class="cert-description">
+                  This certification covers the fundamentals of ethical hacking, including penetration testing,
+                  vulnerability assessment, and security best practices. It demonstrates the ability to identify,
+                  analyze, and mitigate security threats in various IT environments.
+                </p>
+                <div class="cert-skills">
+                  <span class="skill-tag">Penetration Testing</span>
+                  <span class="skill-tag">Vulnerability Assessment</span>
+                  <span class="skill-tag">Security Analysis</span>
+                  <span class="skill-tag">Network Security</span>
+                  <span class="skill-tag">Incident Response</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Certificate 4 -->
+            <div class="cert-card">
+              <div class="cert-image">
+                <img
+                  src="assets/NetworkCert.png"
+                  alt="Certificate Name"
+                  class="cert-image"
+                  onclick="openCertModal(this)"
+                />
+              </div>
+              <div class="cert-content">
+                <h3>Network Foundations</h3>
+                <p class="cert-issuer">Huawei</p>
+                <p class="cert-date">June 2022</p>
+                <p class="cert-description">
+                  This certification demonstrates foundational knowledge in networking concepts, protocols, and
+                  infrastructure. It covers topics such as network topologies, IP addressing, routing, switching, and
+                  basic network security, providing a strong base for further networking studies and certifications.
+                </p>
+                <div class="cert-skills">
+                  <span class="skill-tag">Networking Fundamentals</span>
+                  <span class="skill-tag">IP Addressing</span>
+                  <span class="skill-tag">Routing & Switching</span>
+                  <span class="skill-tag">Network Security</span>
+                  <span class="skill-tag">Protocols</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Certificate 5 -->
+            <div class="cert-card">
+              <div class="cert-image">
+                <img
+                  src="assets/SAP cert.png"
+                  alt="Certificate Name"
+                  class="cert-image"
+                  onclick="openCertModal(this)"
+                />
+              </div>
+              <div class="cert-content">
+                <h3>SAP Business One Advance</h3>
+                <p class="cert-issuer">Issuing Organization</p>
+                <p class="cert-date">December 2022</p>
+                <p class="cert-description">
+                  This certification demonstrates advanced proficiency in SAP Business One, including business process
+                  integration, financial management, inventory control, and reporting. It highlights the ability to
+                  configure, customize, and optimize SAP solutions for business efficiency.
+                </p>
+                <div class="cert-skills">
+                  <span class="skill-tag">SAP Business One</span>
+                  <span class="skill-tag">Business Process Integration</span>
+                  <span class="skill-tag">Financial Management</span>
+                  <span class="skill-tag">Inventory Control</span>
+                  <span class="skill-tag">Reporting</span>
+                  <span class="skill-tag">System Customization</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Certificate 6 -->
+            <div class="cert-card">
+              <div class="cert-image">
+                <img
+                  src="assets/BytesCert.png"
+                  alt="Certificate Name"
+                  class="cert-image"
+                  onclick="openCertModal(this)"
+                />
+              </div>
+              <div class="cert-content">
+                <h3>Certificate Of Appreciation (Presidency)</h3>
+                <p class="cert-issuer">BYTES</p>
+                <p class="cert-date">2024</p>
+                <p class="cert-description">
+                  Awarded for exemplary leadership and service as President of BYTES, the official IT organization of
+                  STI College Fairview. Recognized for organizing events, fostering collaboration, and driving
+                  initiatives that enhanced student engagement and professional development.
+                </p>
+                <div class="cert-skills">
+                  <span class="skill-tag">Leadership</span>
+                  <span class="skill-tag">Event Management</span>
+                  <span class="skill-tag">Team Building</span>
+                  <span class="skill-tag">Community Engagement</span>
+                  <span class="skill-tag">Strategic Planning</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Certificate 7 -->
+            <div class="cert-card">
+              <div class="cert-image">
+                <img
+                  src="assets/CodeFestCert.jpg"
+                  alt="Certificate Name"
+                  class="cert-image"
+                  onclick="openCertModal(this)"
+                />
+              </div>
+              <div class="cert-content">
+                <h3>Codefest 2nd Runner Up</h3>
+                <p class="cert-issuer">STI</p>
+                <p class="cert-date">March 2023</p>
+                <p class="cert-description">
+                  Awarded for achieving 2nd Runner Up in Codefest, a programming competition at STI. Demonstrated strong
+                  problem-solving skills, teamwork, and the ability to develop efficient software solutions under time
+                  constraints.
+                </p>
+                <div class="cert-skills">
+                  <span class="skill-tag">Problem Solving</span>
+                  <span class="skill-tag">Teamwork</span>
+                  <span class="skill-tag">Software Development</span>
+                  <span class="skill-tag">Time Management</span>
+                  <span class="skill-tag">Programming</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Certificate 8 -->
+            <div class="cert-card">
+              <div class="cert-image">
+                <img
+                  src="assets/ThinkQuestCert.jpg"
+                  alt="Certificate Name"
+                  class="cert-image"
+                  onclick="openCertModal(this)"
+                />
+              </div>
+              <div class="cert-content">
+                <h3>Think Quest Participation</h3>
+                <p class="cert-issuer">STI</p>
+                <p class="cert-date">March 2024</p>
+                <p class="cert-description">
+                  Participated as a team member in Think Quest, a quiz bee competition focused on technology and general
+                  knowledge. Demonstrated teamwork, quick thinking, and effective communication under pressure.
+                </p>
+                <div class="cert-skills">
+                  <span class="skill-tag">Teamwork</span>
+                  <span class="skill-tag">Problem Solving</span>
+                  <span class="skill-tag">Communication</span>
+                  <span class="skill-tag">Quick Thinking</span>
+                  <span class="skill-tag">Technology Knowledge</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Certificate 9 -->
+            <div class="cert-card">
+              <div class="cert-image">
+                <img
+                  src="assets/EssayCert.jpg"
+                  alt="Certificate Name"
+                  class="cert-image"
+                  onclick="openCertModal(this)"
+                />
+              </div>
+              <div class="cert-content">
+                <h3>Essay Does It 2nd Runner Up</h3>
+                <p class="cert-issuer">STI</p>
+                <p class="cert-date">March 2024</p>
+                <p class="cert-description">
+                  Awarded 2nd Runner Up in "Essay Does It," an essay writing competition at STI. Recognized for strong
+                  writing skills, creativity, and the ability to communicate ideas effectively under time constraints.
+                </p>
+                <div class="cert-skills">
+                  <span class="skill-tag">Essay Writing</span>
+                  <span class="skill-tag">Creativity</span>
+                  <span class="skill-tag">Communication</span>
+                  <span class="skill-tag">Critical Thinking</span>
+                  <span class="skill-tag">Time Management</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Certificate 10 -->
+            <div class="cert-card">
+              <div class="cert-image">
+                <img
+                  src="assets/Speech Cert.jpg"
+                  alt="Certificate Name"
+                  class="cert-image"
+                  onclick="openCertModal(this)"
+                />
+              </div>
+              <div class="cert-content">
+                <h3>Stand Up and Deliver Participation</h3>
+                <p class="cert-issuer">Issuing Organization</p>
+                <p class="cert-date">March 2024</p>
+                <p class="cert-description">
+                  Participated in "Stand Up and Deliver," a speech competition focused on public speaking and effective
+                  communication. Demonstrated confidence, clarity, and the ability to engage an audience under pressure.
+                </p>
+                <div class="cert-skills">
+                  <span class="skill-tag">Public Speaking</span>
+                  <span class="skill-tag">Communication</span>
+                  <span class="skill-tag">Confidence</span>
+                  <span class="skill-tag">Audience Engagement</span>
+                  <span class="skill-tag">Presentation Skills</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Organizations & Leadership Section -->
+      <section class="organizations">
+        <div class="container">
+          <div class="section-header">
+            <h2>Leadership & Organizations</h2>
+            <p>Building communities and leading teams toward shared goals</p>
+          </div>
+
+          <div class="organizations-grid">
+            <!-- Organization 1 - Presidency -->
+            <div class="org-card featured">
+              <div class="org-header">
+                <div class="org-image">
+                  <img
+                    src="assets/bytes.png"
+                    alt="President Organization"
+                    class="org-image"
+                    onclick="openOrgModal(this)"
+                  />
+                </div>
+                <div class="org-title">
+                  <h3>BYTES (Brilliant Youth and Technology Elite Students)</h3>
+                  <p class="org-role president">President</p>
+                  <p class="org-period">2022 - 2024</p>
+                </div>
+              </div>
+              <div class="org-content">
+                <p class="org-description">
+                  Led the organization through its "rebirth" after COVID, revitalizing a dormant group and proving that
+                  the IT organization could stand on its own despite numerous challenges. Organized numerous events to
+                  enhance the IT department and provided a platform to showcase outstanding IT students through our
+                  organization.
+                </p>
+                <div class="org-achievements">
+                  <h4>Key Achievements:</h4>
+                  <ul>
+                    <li>Organized and led the General Assembly for IT students</li>
+                    <li>Launched and managed Esports tournaments within the school</li>
+                    <li>Coordinated Technology Exhibitions to showcase student projects</li>
+                  </ul>
+                </div>
+                <div class="org-skills">
+                  <span class="skill-tag">Leadership</span>
+                  <span class="skill-tag">Strategic Planning</span>
+                  <span class="skill-tag">Team Management</span>
+                  <span class="skill-tag">Event Organization</span>
+                  <span class="skill-tag">Community Building</span>
+                  <span class="skill-tag">Problem Solving</span>
+                  <span class="skill-tag">Communication</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Organization 2 - Vice Presidency -->
+            <div class="org-card">
+              <div class="org-header">
+                <div class="org-icon">
+                  <span class="leadership-badge vice-president">🎖️</span>
+                </div>
+                <div class="org-title">
+                  <h3>Student Council</h3>
+                  <p class="org-role vice-president">Vice President</p>
+                  <p class="org-period">2018 - 2019</p>
+                </div>
+              </div>
+              <div class="org-content">
+                <p class="org-description">
+                  Supported organizational leadership and spearheaded key initiatives. Describe your contributions and
+                  impact as Vice President.
+                </p>
+                <div class="org-achievements">
+                  <h4>Key Contributions:</h4>
+                  <ul>
+                    <li>
+                      Led a school entrepreneurship project, organizing and managing a successful fundraising event
+                    </li>
+                    <li>Coordinated student outreach programs to improve campus engagement</li>
+                    <li>Assisted in planning and executing school-wide assemblies and activities</li>
+                  </ul>
+                </div>
+                <div class="org-skills">
+                  <span class="skill-tag">Collaboration</span>
+                  <span class="skill-tag">Project Management</span>
+                  <span class="skill-tag">Communication</span>
+                  <span class="skill-tag">Leadership</span>
+                  <span class="skill-tag">Event Planning</span>
+                  <span class="skill-tag">Team Coordination</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Competitions & Awards Section -->
+      <section class="competitions">
+        <div class="container">
+          <div class="section-header">
+            <h2>Competition Awards</h2>
+            <p>Recognition for excellence in competitive environments</p>
+          </div>
+
+          <div class="competitions-grid">
+            <!-- Competition 1 - Champion -->
+            <div class="competition-card champion">
+              <div class="competition-header">
+                <div class="cert-image">
+                  <img
+                    src="assets/Chess Cert.png"
+                    alt="Certificate Name"
+                    class="cert-image"
+                    onclick="openCertModal(this)"
+                  />
+                </div>
+                <div class="competition-title">
+                  <h3>Chess Intramurals</h3>
+                  <p class="competition-rank champion">1st Place - Champion</p>
+                  <p class="competition-date">April 2024</p>
+                </div>
+              </div>
+              <div class="competition-content">
+                <p class="competition-description">
+                  Competed in a round robin chess tournament featuring 4 teams of 5 players each. Demonstrated strategic
+                  thinking, teamwork, and adaptability to secure the championship title against strong opponents.
+                </p>
+                <div class="competition-details">
+                  <div class="detail-item">
+                    <span class="detail-label">Category:</span>
+                    <span class="detail-value">Board Game / Mind Sports</span>
+                  </div>
+                  <div class="detail-item">
+                    <span class="detail-label">Participants:</span>
+                    <span class="detail-value">4 teams of 5</span>
+                  </div>
+                </div>
+                <div class="competition-skills">
+                  <span class="skill-tag">Strategic Thinking</span>
+                  <span class="skill-tag">Teamwork</span>
+                  <span class="skill-tag">Adaptability</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Competition 2 - 3rd Place -->
+            <div class="competition-card third-place">
+              <div class="competition-header">
+                <div class="competition-icon">
+                  <span class="award-badge third-place">🥉</span>
+                </div>
+                <div class="competition-title">
+                  <h3>Essay Does It</h3>
+                  <p class="competition-rank third-place">3rd Place</p>
+                  <p class="competition-date">March 2024</p>
+                </div>
+              </div>
+              <div class="competition-content">
+                <p class="competition-description">
+                  Essay writing competitions challenge participants to craft compelling, well-structured essays under
+                  time constraints. Achieving 3rd place demonstrates strong writing skills, creativity, and the ability
+                  to communicate ideas effectively in a competitive environment.
+                </p>
+                <div class="competition-details">
+                  <div class="detail-item">
+                    <span class="detail-label">Category:</span>
+                    <span class="detail-value">Literary Competition</span>
+                  </div>
+                  <div class="detail-item">
+                    <span class="detail-label">Participants:</span>
+                    <span class="detail-value">10+ participants</span>
+                  </div>
+                </div>
+                <div class="competition-skills">
+                  <span class="skill-tag">Essay Writing</span>
+                  <span class="skill-tag">Creativity</span>
+                  <span class="skill-tag">Communication</span>
+                  <span class="skill-tag">Critical Thinking</span>
+                  <span class="skill-tag">Time Management</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Competition 3 - 3rd Place -->
+            <div class="competition-card third-place">
+              <div class="competition-header">
+                <div class="competition-icon">
+                  <span class="award-badge third-place">🥉</span>
+                </div>
+                <div class="competition-title">
+                  <h3>Codefest</h3>
+                  <p class="competition-rank third-place">3rd Place</p>
+                  <p class="competition-date">March 2023</p>
+                </div>
+              </div>
+              <div class="competition-content">
+                <p class="competition-description">
+                  Codefest is a programming competition where 6 teams of 4 members each competed to solve challenging coding problems under time pressure. Achieving 3rd place highlights strong problem-solving abilities, teamwork, and proficiency in software development.
+                </p>
+                <div class="competition-details">
+                  <div class="detail-item">
+                    <span class="detail-label">Category:</span>
+                    <span class="detail-value">Programming</span>
+                  </div>
+                  <div class="detail-item">
+                    <span class="detail-label">Participants:</span>
+                    <span class="detail-value">6 teams of 4</span>
+                  </div>
+                </div>
+                <div class="competition-skills">
+                  <span class="skill-tag">Problem Solving</span>
+                  <span class="skill-tag">Teamwork</span>
+                  <span class="skill-tag">Programming</span>
+                  <span class="skill-tag">Time Management</span>
+                  <span class="skill-tag">Software Development</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action -->
+      <section class="cta">
+        <div class="container">
+          <div class="cta-content">
+            <h2>Ready to Collaborate?</h2>
+            <p>Let's discuss how my skills and experience can contribute to your next project.</p>
+            <div class="cta-buttons">
+              <a href="contact.html" class="btn btn-primary">Get In Touch</a>
+              <a href="projects.html" class="btn btn-secondary">View My Work</a>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 Justine Bernard J. Lagasca. All rights reserved.</p>
+      </div>
+    </footer>
+    <div id="certModal" class="cert-modal" onclick="closeCertModal(event)">
+      <div class="cert-modal-content">
+        <button class="cert-modal-close" onclick="closeCertModal()">&times;</button>
+        <img id="certModalImage" src="" alt="Certificate" class="cert-modal-image" />
+      </div>
+    </div>
+
+    <div id="orgModal" class="org-modal" onclick="closeOrgModal(event)">
+      <div class="org-modal-content">
+        <button class="org-modal-close" onclick="closeOrgModal()">&times;</button>
+        <img id="orgModalImage" src="" alt="Organization" class="org-modal-image" />
+      </div>
+    </div>
+    <!-- Scripts -->
     <script src="js/navbar-loader.js"></script>
-</body>
+    <script src="js/video-loader.js"></script>
+    <script>
+      function openCertModal(img) {
+        const modal = document.getElementById("certModal");
+        const modalImg = document.getElementById("certModalImage");
+        modal.classList.add("active");
+        modalImg.src = img.src;
+        modalImg.alt = img.alt;
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeCertModal(event) {
+        const modal = document.getElementById("certModal");
+        if (event && event.target !== modal && !event.target.classList.contains("cert-modal-close")) {
+          return;
+        }
+        modal.classList.remove("active");
+        document.body.style.overflow = "auto";
+      }
+
+      function openOrgModal(img) {
+        const modal = document.getElementById("orgModal");
+        const modalImg = document.getElementById("orgModalImage");
+        modal.classList.add("active");
+        modalImg.src = img.src;
+        modalImg.alt = img.alt;
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeOrgModal(event) {
+        const modal = document.getElementById("orgModal");
+        if (event && event.target !== modal && !event.target.classList.contains("org-modal-close")) {
+          return;
+        }
+        modal.classList.remove("active");
+        document.body.style.overflow = "auto";
+      }
+
+      // Update the existing escape key listener to handle both modals
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+          closeCertModal();
+          closeOrgModal();
+        }
+      });
+
+      // Close modal with Escape key
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+          closeCertModal();
+        }
+      });
+    </script>
+  </body>
 </html>
