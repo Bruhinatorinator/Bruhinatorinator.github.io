@@ -3,34 +3,330 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Justine Bernard J. Lagasca</title>
+    <title>About Me - Justine Bernard J. Lagasca</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Files -->
     <link rel="stylesheet" href="css/global.css">
-    
-    <!-- Component styles -->
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/video.css">
-    
+    <link rel="stylesheet" href="css/about.css">
 </head>
-<body>
+<body class="has-video-bg">
+    <!-- Video Background -->
     <div class="video-background">
         <video autoplay muted loop id="bg-video">
-            <source src="path/to/your/background-video.mp4" type="video/mp4">
-            <!-- Add additional video formats for better browser support -->
-            <source src="path/to/your/background-video.webm" type="video/webm">
-            Your browser does not support the video tag.
+            <source src="assets/ocean-loop.mp4" type="video/mp4">
         </video>
     </div>
-    
-    <!-- Light overlay for better text readability on royal blue video -->
+
+    <!-- Video Overlay -->
     <div class="video-overlay"></div>
-   <div id="navbar-container"></div>
+
+    <!-- Navbar -->
+    <div id="navbar-container"></div>
 
     <!-- Main Content -->
-    <main style="padding: 2rem;">
-        <h1>This is the About Page</h1>
-        <p>I'm hosted with GitHub Pages.</p>
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="about-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>About Me</h1>
+                        <p class="hero-subtitle">Get to know the person behind the code</p>
+                        <p class="hero-description">
+                            I'm a passionate full-stack developer who believes in creating meaningful digital experiences. 
+                            My journey in technology is driven by curiosity, creativity, and a desire to solve real-world problems through code.
+                        </p>
+                    </div>
+                    <div class="hero-image">
+                        <img src="assets/1750071112349.jpeg" alt="Justine Bernard J. Lagasca" class="profile-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Personal Introduction -->
+        <section class="personal-intro">
+            <div class="container">
+                <div class="section-content">
+                    <h2>Who I Am</h2>
+                    <div class="intro-grid">
+                        <div class="intro-text">
+                            <p>
+                                Hello! I'm Justine, a dedicated full-stack developer with a passion for creating innovative 
+                                digital solutions. My journey into programming began with curiosity and has evolved into a 
+                                deep love for problem-solving and continuous learning.
+                            </p>
+                            <p>
+                                I believe that great software is not just about clean code, but about understanding user needs 
+                                and creating experiences that make a difference. Whether I'm working on front-end interfaces 
+                                or back-end systems, I always strive for excellence and attention to detail.
+                            </p>
+                        </div>
+                        <div class="quick-facts">
+                            <h3>Quick Facts</h3>
+                            <ul class="facts-list">
+                                <li><span class="fact-icon">📍</span> Based in [Your Location]</li>
+                                <li><span class="fact-icon">🎓</span> [Your Degree/Field]</li>
+                                <li><span class="fact-icon">💼</span> [Years] of Experience</li>
+                                <li><span class="fact-icon">☕</span> Coffee Enthusiast</li>
+                                <li><span class="fact-icon">🌱</span> Always Learning</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="education">
+            <div class="container">
+                <div class="section-content">
+                    <h2>Education</h2>
+                    <div class="education-timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h3>ABM Senior High Graduate</h3>
+                                <h3>Excellence Award</h3>
+                                <h4>APEC V.Luna</h4>
+                                <span class="timeline-date">[2016 - 2018]</span>
+                                <p>
+                                    Relevant coursework: Applied Economics, Business Mathematics, Fundamentals of Accountancy, Business, and Management, Organization and Management, Principles of Marketing, Business Finance.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h3>Bachelor Of Science in Information Techonology</h3>
+                                <h3>Cum Laude</h3>
+                                <h4>STI College Fairview</h4>
+                                <span class="timeline-date">[2021-2025]</span>
+                                <p>
+                                    Relevant coursework: Programming Fundamentals, Object-Oriented Programming, Data Structures and Algorithms, Database Management Systems, Web Development, Mobile Application Development, Systems Analysis and Design, Networking Fundamentals, Information Security, Software Engineering, Capstone Project.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills & Technologies -->
+        <section class="skills">
+            <div class="container">
+                <div class="section-content">
+                    <h2>Skills & Technologies</h2>
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h3>Languages</h3>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Java</span>
+                                <span class="skill-tag">C#</span>
+                                <span class="skill-tag">Python</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-category">
+                            <h3>Frontend</h3>
+                            <div class="skill-tags">
+                                <span class="skill-tag">HTML</span>
+                                <span class="skill-tag">CSS</span>
+                                <span class="skill-tag">JavaScript</span>
+                                <span class="skill-tag">Nuxt</span>
+                                <span class="skill-tag">Vue.js</span>
+                                <span class="skill-tag">TypeScript</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-category">
+                            <h3>Backend</h3>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Node.js</span>
+                                <span class="skill-tag">PHP</span>
+                                <span class="skill-tag">JS</span>
+                                <span class="skill-tag">Laravel</span>
+                                <span class="skill-tag">REST APIs</span>
+                                <span class="skill-tag">GraphQL</span>
+                                <span class="skill-tag">JWT</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-category">
+                            <h3>Database</h3>
+                            <div class="skill-tags">
+                                <span class="skill-tag">MySQL</span>
+                                <span class="skill-tag">MongoDB</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-category">
+                            <h3>Tools & Others</h3>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Git</span>
+                                <span class="skill-tag">Xampp</span>
+                                <span class="skill-tag">Huawei Cloud</span>
+                                <span class="skill-tag">SAP</span>
+                                <span class="skill-tag">Figma</span>
+                                <span class="skill-tag">Archimate</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience/Background -->
+                        <div class="experience-card">
+                            <div class="experience-header">
+                                <h3>PHP Developer/Full Stack Developer Intern</h3>
+                                <span class="company">Apollo Systems/ Apollo Lightings</span>
+                                <span class="duration">February 2025 - May 2025</span>
+                            </div>
+                            <div class="experience-content">
+                                <p>
+                                    As a PHP Developer and Full Stack Developer Intern, I contributed to both front-end and back-end development, building and maintaining web applications using PHP, JavaScript, and MySQL. I also gained hands-on experience in software and hardware troubleshooting, resolving technical issues to ensure smooth project delivery and system reliability.
+                                </p>
+                                <ul class="achievements">
+                                    <li>Notable project or achievement
+                                        <ul>
+                                            <li>Developed a fully dynamic banner module for the system from scratch</li>
+                                            <li>Optimized SQL queries for a different project</li>
+                                            <li>Collaborated with a teammate to create a Laravel CRUD System</li>
+                                        </ul>
+                                    </li>
+                                    <li>Skills developed or applied
+                                        <ul>
+                                            <li>Applied Theories in structuring code</li>
+                                            <li>Improved problem-solving skills through programming challenges</li>
+                                            <li>Able to use theoretical skills in practical environment</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hobbies & Interests -->
+        <section class="hobbies">
+            <div class="container">
+                <div class="section-content">
+                    <h2>Hobbies & Interests</h2>
+                    <div class="hobbies-grid">
+                        <div class="hobby-card">
+                            <div class="hobby-icon">🎮</div>
+                            <h3>Gaming</h3>
+                            <p>I enjoy exploring virtual worlds and appreciate the artistry behind game development.</p>
+                        </div>
+                        
+                        <div class="hobby-card">
+                            <div class="hobby-icon">📚</div>
+                            <h3>Reading</h3>
+                            <p>Always learning through tech blogs, programming books, and staying updated with industry trends.</p>
+                        </div>
+                        
+                        <div class="hobby-card">
+                            <div class="hobby-icon">🏃‍♂️</div>
+                            <h3>Fitness</h3>
+                            <p>Staying active helps me maintain focus and energy for coding sessions.</p>
+                        </div>
+                        
+                        <div class="hobby-card">
+                            <div class="hobby-icon">🎵</div>
+                            <h3>Music</h3>
+                            <p>Music fuels my creativity and helps me get into the flow state while programming.</p>
+                        </div>
+                        
+                        <div class="hobby-card">
+                            <div class="hobby-icon">🌱</div>
+                            <h3>Open Source</h3>
+                            <p>Contributing to open source projects and giving back to the developer community.</p>
+                        </div>
+                        
+                        <div class="hobby-card">
+                            <div class="hobby-icon">📷</div>
+                            <h3>Photography</h3>
+                            <p>Capturing moments and exploring the intersection of technology and art.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Personal Philosophy -->
+        <section class="philosophy">
+            <div class="container">
+                <div class="section-content">
+                    <h2>My Philosophy</h2>
+                    <div class="philosophy-content">
+                        <div class="philosophy-text">
+                            <blockquote>
+                                "Code is not just about solving problems—it's about creating possibilities. 
+                                Every line of code is an opportunity to make someone's life a little bit better."
+                            </blockquote>
+                            <p>
+                                I believe in writing clean, maintainable code that not only works but tells a story. 
+                                My approach to development is rooted in empathy—understanding the user's needs, 
+                                the team's goals, and the business objectives.
+                            </p>
+                            <p>
+                                Continuous learning is at the core of my professional journey. The tech industry 
+                                evolves rapidly, and I embrace this change as an opportunity to grow and adapt.
+                            </p>
+                        </div>
+                        <div class="values-list">
+                            <h3>Core Values</h3>
+                            <ul>
+                                <li><strong>Quality:</strong> Attention to detail in every project</li>
+                                <li><strong>Collaboration:</strong> Great software is built by great teams</li>
+                                <li><strong>Innovation:</strong> Always looking for better solutions</li>
+                                <li><strong>Growth:</strong> Learning never stops</li>
+                                <li><strong>Impact:</strong> Technology should serve humanity</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="about-cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Let's Work Together</h2>
+                    <p>
+                        I'm always excited to take on new challenges and collaborate with like-minded individuals. 
+                        Whether you have a project in mind or just want to connect, I'd love to hear from you.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="contact.html" class="btn btn-primary">Get In Touch</a>
+                        <a href="projects.html" class="btn btn-secondary">View My Work</a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
+    <!-- Footer (optional) -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Justine Bernard J. Lagasca. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
     <script src="js/navbar-loader.js"></script>
+    <script src="js/video-loader.js"></script>
 </body>
 </html>

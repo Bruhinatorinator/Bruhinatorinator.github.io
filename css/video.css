@@ -1,17 +1,30 @@
+/* Video Background Styles - Fixed Version */
+
 .video-background {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     z-index: -2;
+    display: block;
+    visibility: visible;
+    opacity: 1;
     overflow: hidden;
 }
 
-.video-background video {
-    width: 100%;
-    height: 100%;
+.video-background video,
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     object-fit: cover;
+    z-index: -1;
+    display: block;
+    visibility: visible;
+    opacity: 1;
 }
 
 /* Overlay for better text readability */
@@ -23,6 +36,7 @@
     height: 100%;
     background: rgba(0, 0, 0, 0.2); /* Adjust opacity as needed */
     z-index: -1;
+    pointer-events: none; /* Don't interfere with interactions */
 }
 
 /* Fallback gradient if video fails */
@@ -35,6 +49,13 @@ body.has-video-bg {
     position: relative;
     z-index: 1;
     color: #fff; /* Default white text for dark video background */
+}
+
+/* Ensure main content is above video */
+.main-content {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
 }
 
 /* Text shadows for better readability on video background */
@@ -65,10 +86,72 @@ body.has-video-bg p {
 
 /* Smooth transition when video loads */
 .video-background video {
-    opacity: 0;
     transition: opacity 0.5s ease-in-out;
 }
 
 .video-background video.loaded {
     opacity: 1;
+}
+
+/* Ensure proper scrolling behavior */
+html {
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    overflow-y: auto;   /* Allow vertical scroll */
+    height: auto;       /* Don't constrain height */
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+body {
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    overflow-y: auto;   /* Allow vertical scroll */
+    height: auto;       /* Don't constrain height */
+    min-height: 100vh;  /* Minimum full viewport height */
+}
+
+/* Ensure video background doesn't interfere with scrolling */
+.video-background {
+    pointer-events: none; /* Important: Don't capture scroll events */
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+    .video-background video,
+    #bg-video {
+        /* Ensure video covers properly on mobile */
+        min-width: 100vw;
+        min-height: 100vh;
+        width: auto;
+        height: auto;
+    }
+    
+    /* Slightly stronger text shadows on mobile */
+    body.has-video-bg h1,
+    body.has-video-bg h2,
+    body.has-video-bg h3 {
+        text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+    }
+}
+
+/* Performance optimizations */
+.video-background video {
+    /* Optimize video rendering */
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+/* Accessibility - Respect user preferences */
+@media (prefers-reduced-motion: reduce) {
+    .video-background video {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .video-overlay {
+        background: rgba(0, 0, 0, 0.5); /* Stronger overlay for better contrast */
+    }
 }

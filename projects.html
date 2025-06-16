@@ -1,33 +1,309 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Justine Bernard J. Lagasca</title>
-    <link rel="stylesheet" href="css/global.css">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Justine Bernard J. Lagasca - Portfolio</title>
+
+    <!-- Google Fonts - Add these BEFORE your CSS files -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/global.css" />
+
     <!-- Component styles -->
-    <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/video.css">
-    
-</head>
-<body>
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/video.css" />
+
+    <!-- Page-specific styles -->
+    <link rel="stylesheet" href="css/projects.css" />
+  </head>
+  <body>
+    <!-- Video Background -->
     <div class="video-background">
-        <video autoplay muted loop id="bg-video">
-            <source src="assets/OCEAN LOOP.mp4" type="video/mp4">
-        </video>
+      <video autoplay muted loop id="bg-video">
+        <source src="assets/ocean-loop.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
     </div>
-    
-    <!-- Light overlay for better text readability on royal blue video -->
     <div class="video-overlay"></div>
-   <div id="navbar-container"></div>
+
+    <!-- Navigation -->
+    <div id="navbar-container"></div>
 
     <!-- Main Content -->
-    <main style="padding: 2rem;">
-        <h1>This is the Projects page</h1>
-        <p>I'm hosted with GitHub Pages.</p>
+    <main class="main-content">
+      <!-- Hero Section -->
+      <section class="projects-hero">
+        <div class="container">
+          <div class="hero-content">
+            <h1>My Projects</h1>
+            <p class="hero-subtitle">Explore my journey through code, creativity, and problem-solving</p>
+            <p class="hero-description">
+              From web applications to mobile solutions, each project represents a unique challenge and an opportunity
+              to learn, grow, and create something meaningful. No matter how hard it got, I always grinded through and
+              learned.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Filter Section -->
+      <section class="filter-section">
+        <div class="container">
+          <div class="filter-container">
+            <h3>Filter by Technology</h3>
+            <div class="filter-buttons">
+              <button class="filter-btn active" data-filter="all">All Projects</button>
+              <button class="filter-btn" data-filter="web">Web Development</button>
+              <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+              <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+              <button class="filter-btn" data-filter="frontend">Frontend</button>
+              <button class="filter-btn" data-filter="backend">Backend</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Grid -->
+      <section class="projects-section">
+        <div class="container">
+          <div class="projects-grid" id="projects-grid">
+            <!-- Project Card 1 -->
+            <div class="project-card" data-category="web fullstack">
+              <div class="project-image">
+                <img src="assets/vivo-home.png" alt="Fashion Homepage" class="project-screenshot" />
+                <div class="project-overlay">
+                  <div class="project-links">
+                    <a
+                      href="https://github.com/Bruhinatorinator/ProjectVivo"
+                      class="project-link"
+                      title="View Source Code"
+                    >
+                      <span class="link-icon">💻</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="project-content">
+                <div class="project-header">
+                  <h3>Fashion Designer Appointment System</h3>
+                  <div class="project-status">
+                    <span class="status-badge in-progress">IN PROGRESS</span>
+                  </div>
+                </div>
+                <p class="project-description">
+                  Originally a purely vanilla application made for a school thesis, this appointment system has
+                  significantly expanded in scope, especially regarding security and scalability. The backend is now
+                  powered by Laravel and GraphQL, while the frontend leverages TypeScript, Nuxt, Vue, Vuetify, and
+                  Tailwind CSS. Users can book appointments, manage schedules, and track their orders with a strong
+                  emphasis on user experience and real-world integration. The project is currently undergoing active
+                  development, with plans to integrate more features and enhance its functionality.
+                </p>
+                <div class="tech-stack">
+                  <span class="tech-tag">Laravel</span>
+                  <span class="tech-tag">GraphQL</span>
+                  <span class="tech-tag">TypeScript</span>
+                  <span class="tech-tag">Nuxt</span>
+                  <span class="tech-tag">Vue</span>
+                  <span class="tech-tag">Vuetify</span>
+                  <span class="tech-tag">Tailwind CSS</span>
+                </div>
+                <div class="project-meta">
+                  <span class="project-date">📅 2024</span>
+                  <span class="project-duration">⏱️ 3 months</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project Card 2 -->
+            <div class="project-card" data-category="mobile">
+              <div class="project-image">
+                <div class="image-placeholder">
+                  <span class="placeholder-icon">📱</span>
+                  <small>Screenshot Not Available</small>
+                </div>
+                <div class="project-overlay">
+                  <div class="project-links">
+                    <span class="unavailable">Link Unavailable</span>
+                  </div>
+                </div>
+              </div>
+              <div class="project-content">
+                <div class="project-header">
+                  <h3>Hotel Reservation App</h3>
+                  <div class="project-status">
+                    <span class="status-badge completed">Completed</span>
+                  </div>
+                </div>
+                <p class="project-description">
+                  A reservation system for mobile android devices meant for resrving hotel rooms, dates, and other
+                  amenities. It included user authentication, real-time updates, and a sleek user interface.
+                  Unfortunately, the project was part of a competition and is therefore under the ownership of the
+                  competition organizers.
+                </p>
+                <div class="tech-stack">
+                  <span class="tech-tag">Java</span>
+                  <span class="tech-tag">Firebase</span>
+                </div>
+                <div class="project-meta">
+                  <span class="project-date">📅 2023</span>
+                  <span class="project-duration">⏱️ 6 Hours</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project Card 3 -->
+            <div class="project-card" data-category="web frontend">
+              <div class="project-image">
+                <img src="assets/port-home.png" alt="Portfolio Website Homepage" class="project-screenshot" />
+
+                <div class="project-overlay">
+                  <div class="project-links">
+                    <a
+                      href="https://github.com/Bruhinatorinator/Bruhinatorinator.github.io"
+                      class="project-link"
+                      title="View Source Code"
+                    >
+                      <span class="link-icon">💻</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="project-content">
+                <div class="project-header">
+                  <h3>Portfolio Website</h3>
+                  <div class="project-status">
+                    <span class="status-badge completed">Completed</span>
+                  </div>
+                </div>
+                <p class="project-description">
+                  This online portfolio you are viewing now. A responsive portfolio website showcasing modern design
+                  principles with glass morphism effects and smooth animations.
+                </p>
+                <div class="tech-stack">
+                  <span class="tech-tag">HTML</span>
+                  <span class="tech-tag">CSS</span>
+                  <span class="tech-tag">JavaScript</span>
+                </div>
+                <div class="project-meta">
+                  <span class="project-date">📅 2025</span>
+                  <span class="project-duration">⏱️ 3 days</span>
+                </div>
+              </div>
+            </div>
+              <!-- Project Card 4 -->
+            <div class="project-card" data-category="backend">
+              <div class="project-image">
+                <img src="" alt="HR Dashboard" class="project-screenshot" />
+
+                <div class="project-overlay">
+                  <div class="project-links">
+                    <a
+                      href="https://github.com/Bruhinatorinator/Bruhinatorinator.github.io"
+                      class="project-link"
+                      title="View Source Code"
+                    >
+                      <span class="link-icon">💻</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="project-content">
+                <div class="project-header">
+                  <h3>Portfolio Website</h3>
+                  <div class="project-status">
+                    <span class="status-badge completed">Completed</span>
+                  </div>
+                </div>
+                <p class="project-description">
+                  Created a backend for generating a dashboard for HR, as well as generating the data itself.
+                </p>
+                <div class="tech-stack">
+                  <span class="tech-tag">Python</span>
+                </div>
+                <div class="project-meta">
+                  <span class="project-date">📅 2025</span>
+                  <span class="project-duration">⏱️ 3 days</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project Card 5 -->
+            <div class="project-card" data-category="fullstack web">
+              <div class="project-image">
+                <img src="assets/pro-m-banner.png" alt="School Elms Banner Module" class="project-screenshot" />
+                <div class="project-overlay">
+                  <div class="project-links">
+                    <span class="unavailable">Link Unavailable</span>
+                  </div>
+                </div>
+              </div>
+              <div class="project-content">
+                <div class="project-header">
+                  <h3>School Elms: Banner Module</h3>
+                  <div class="project-status">
+                    <span class="status-badge completed">Completed</span>
+                  </div>
+                </div>
+                <p class="project-description">
+                  Done during my internship, this module was made from scratch for the ELMS system for schools that
+                  would, purchase an ELMS from the company. This was created for a start up named Project-M, whose main
+                  focus are school ELMSs. The banner is fully dynamic allowing users to select an image, add a link to
+                  the image, reorder the banners, and set an expiration date and time should they choose. Additionally,
+                  I also made the welcome text which showed the name of the user.
+                </p>
+                <div class="tech-stack">
+                  <span class="tech-tag">Laravel</span>
+                  <span class="tech-tag">GraphQL</span>
+                  <span class="tech-tag">TypeScript</span>
+                  <span class="tech-tag">Nuxt</span>
+                  <span class="tech-tag">Vue</span>
+                  <span class="tech-tag">Vuetify</span>
+                  <span class="tech-tag">Tailwind CSS</span>
+                  <span class="tech-tag">JWT</span>
+                </div>
+                <div class="project-meta">
+                  <span class="project-date">📅 2025</span>
+                  <span class="project-duration">⏱️ 2 months</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action -->
+      <section class="projects-cta">
+        <div class="container">
+          <div class="cta-content">
+            <h2>Interested in Working Together?</h2>
+            <p>
+              I'm always excited to take on new challenges and collaborate on innovative projects. Let's discuss how we
+              can bring your ideas to life!
+            </p>
+            <div class="cta-buttons">
+              <a href="contact.html" class="btn btn-primary">Contact Me</a>
+              <a href="about.html" class="btn btn-secondary">Learn More About Me</a>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2024 Justine Bernard J. Lagasca. All rights reserved.</p>
+      </div>
+    </footer>
+
     <script src="js/navbar-loader.js"></script>
-</body>
+    <script src="js/video-loader.js"></script>
+    <script src="js/projects-filter.js"></script>
+  </body>
 </html>

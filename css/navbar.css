@@ -1,24 +1,11 @@
-/* Navbar Styles - Glossy Royal Blue Theme */
+/* Navbar Styles - Glass Morphism Theme */
 
 .navbar {
-    /* Glossy Royal Blue Gradient */
-    background: linear-gradient(135deg, 
-        #1e3c72 0%,     /* Deep royal blue */
-        #2a5298 25%,    /* Royal blue */
-        #3d6bb3 50%,    /* Lighter royal blue */
-        #2a5298 75%,    /* Back to royal blue */
-        #1e3c72 100%    /* Deep royal blue */
-    );
-    
-    /* Wet/Glossy Effects */
-    box-shadow: 
-        0 4px 15px rgba(30, 60, 114, 0.4),           /* Main shadow */
-        inset 0 1px 0 rgba(255, 255, 255, 0.2),     /* Top highlight */
-        inset 0 -1px 0 rgba(0, 0, 0, 0.2),          /* Bottom shadow */
-        0 0 20px rgba(30, 60, 114, 0.3);            /* Glow effect */
-    
-    /* Glass-like border */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    /* Glass Morphism Effect */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     
     height: 80px;
     display: flex;
@@ -33,13 +20,32 @@
     transition: all 0.3s ease;
 }
 
+.navbar {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+.logo-main {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+.logo-sub {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+.nav-link {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
 /* Hover effect for entire navbar */
 .navbar:hover {
-    box-shadow: 
-        0 6px 20px rgba(30, 60, 114, 0.5),
-        inset 0 1px 0 rgba(255, 255, 255, 0.3),
-        inset 0 -1px 0 rgba(0, 0, 0, 0.2),
-        0 0 30px rgba(30, 60, 114, 0.4);
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .nav-container {
@@ -121,14 +127,11 @@
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-/* Glossy hover effect for nav links */
+/* Glass hover effect for nav links */
 .nav-link:hover {
     color: #fff;
-    background: linear-gradient(135deg, 
-        rgba(255, 255, 255, 0.1) 0%,
-        rgba(255, 255, 255, 0.05) 50%,
-        rgba(255, 255, 255, 0.1) 100%
-    );
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
     
     box-shadow: 
         inset 0 1px 0 rgba(255, 255, 255, 0.2),
@@ -141,11 +144,8 @@
 
 /* Active/current page styling */
 .nav-link.active {
-    background: linear-gradient(135deg, 
-        rgba(255, 255, 255, 0.15) 0%,
-        rgba(255, 255, 255, 0.08) 50%,
-        rgba(255, 255, 255, 0.15) 100%
-    );
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
     
     box-shadow: 
         inset 0 2px 4px rgba(0, 0, 0, 0.2),
@@ -179,8 +179,8 @@
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-/* Optional: Subtle animation for the glossy effect */
-@keyframes glossy-shine {
+/* Optional: Subtle animation for the glass effect */
+@keyframes glass-shine {
     0% {
         background-position: -100% 0;
     }
@@ -223,21 +223,18 @@
         top: 70px;
         flex-direction: column;
         
-        /* Glossy mobile menu */
-        background: linear-gradient(180deg, 
-            #1e3c72 0%,
-            #2a5298 50%,
-            #1e3c72 100%
-        );
+        /* Glass mobile menu */
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(20px);
         
         box-shadow: 
-            0 8px 25px rgba(30, 60, 114, 0.4),
+            0 8px 25px rgba(0, 0, 0, 0.2),
             inset 0 1px 0 rgba(255, 255, 255, 0.1);
         
         width: 100%;
         text-align: center;
         transition: 0.3s;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
     }
 
     .nav-menu.active {
@@ -246,7 +243,7 @@
 
     .nav-item {
         height: 70px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .nav-link {
@@ -257,11 +254,8 @@
     }
 
     .nav-link:hover {
-        background: linear-gradient(90deg, 
-            rgba(255, 255, 255, 0.1) 0%,
-            rgba(255, 255, 255, 0.15) 50%,
-            rgba(255, 255, 255, 0.1) 100%
-        );
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(15px);
     }
 
     .nav-toggle {
@@ -287,4 +281,49 @@
     .logo-sub {
         font-size: 0.8rem;
     }
+    
+}
+/* Project Screenshot Styles */
+.project-screenshot {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+    border-radius: 0;
+}
+
+.project-card:hover .project-screenshot {
+    transform: scale(1.05);
+    filter: brightness(0.8);
+}
+
+/* Ensure the image container maintains aspect ratio */
+.project-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    background: linear-gradient(135deg, 
+        rgba(30, 60, 114, 0.3) 0%,
+        rgba(42, 82, 152, 0.2) 100%
+    );
+    border-radius: 20px 20px 0 0;
+}
+
+/* Loading state for images */
+.project-screenshot {
+    background: linear-gradient(135deg, 
+        rgba(30, 60, 114, 0.3) 0%,
+        rgba(42, 82, 152, 0.2) 100%
+    );
+}
+
+/* Fallback for broken images */
+.project-screenshot:not([src]),
+.project-screenshot[src=""] {
+    display: none;
+}
+
+.project-screenshot:not([src]) + .image-placeholder,
+.project-screenshot[src=""] + .image-placeholder {
+    display: flex;
 }

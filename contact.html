@@ -3,34 +3,271 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Justine Bernard J. Lagasca</title>
-    <link rel="stylesheet" href="css/global.css">
+    <title>Contact - Justine Bernard J. Lagasca</title>
     
-    <!-- Component styles -->
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/video.css">
-    
+    <link rel="stylesheet" href="css/contact.css">
 </head>
-<body>
+<body class="has-video-bg">
+    <!-- Video Background -->
     <div class="video-background">
         <video autoplay muted loop id="bg-video">
-            <source src="path/to/your/background-video.mp4" type="video/mp4">
-            <!-- Add additional video formats for better browser support -->
-            <source src="path/to/your/background-video.webm" type="video/webm">
-            Your browser does not support the video tag.
+            <source src="assets/ocean-loop.mp4" type="video/mp4">
         </video>
     </div>
-    
-    <!-- Light overlay for better text readability on royal blue video -->
+
+    <!-- Video Overlay -->
     <div class="video-overlay"></div>
-   <div id="navbar-container"></div>
+
+    <!-- Navbar -->
+    <div id="navbar-container"></div>
 
     <!-- Main Content -->
-    <main style="padding: 2rem;">
-        <h1>This is the Contact page</h1>
-        <p>I'm hosted with GitHub Pages.</p>
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="contact-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Let's Connect</h1>
+                    <p class="hero-subtitle">Ready to bring your ideas to life</p>
+                    <p class="hero-description">
+                        I'm always excited to discuss new opportunities, collaborate on projects, 
+                        or simply connect with fellow developers and innovators. Let's start a conversation!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Methods -->
+        <section class="contact-methods">
+            <div class="container">
+                <div class="contact-grid">
+                    
+                    <!-- Phone Numbers -->
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <span class="icon">📱</span>
+                        </div>
+                        <div class="contact-info">
+                            <h3>Mobile</h3>
+                            <a class="contact-link">
+                                (+63) 926 715 5622
+                            </a>
+                            <p class="contact-description">Available for calls and messages</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <span class="icon">☎️</span>
+                        </div>
+                        <div class="contact-info">
+                            <h3>Telephone</h3>
+                            <a class="contact-link">
+                                (02) 8961 2117
+                            </a>
+                            <p class="contact-description">Hours: 9 AM - 6 PM</p>
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <span class="icon">📧</span>
+                        </div>
+                        <div class="contact-info">
+                            <h3>Email</h3>
+                            <a href="mailto:justinelagasca@email.com" class="contact-link">
+                                justinelagasca@email.com
+                            </a>
+                            <p class="contact-description">Best for detailed inquiries</p>
+                        </div>
+                    </div>
+
+                    <!-- Social Media -->
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <span class="icon">👔</span>
+                        </div>
+                        <div class="contact-info">
+                            <h3>LinkedIn</h3>
+                            <a href="www.linkedin.com/in/justine-bernard-lagasca" target="_blank" class="contact-link">
+                                linkedin.com/in/justine-bernard-lagasca
+                            </a>
+                            <p class="contact-description">Professional networking</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <span class="icon">📘</span>
+                        </div>
+                        <div class="contact-info">
+                            <h3>Facebook</h3>
+                            <a href="https://facebook.com/bruhiwkms" target="_blank" class="contact-link">
+                                facebook.com/bruhiwkms
+                            </a>
+                            <p class="contact-description">Connect and stay updated</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <span class="icon">📸</span>
+                        </div>
+                        <div class="contact-info">
+                            <h3>Instagram</h3>
+                            <a href="https://instagram.com/justine.lagasca" target="_blank" class="contact-link">
+                                @justine.lagasca
+                            </a>
+                            <p class="contact-description">Behind the scenes</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- uncomment when i get a commercial email -->
+        <!-- Contact Form -->
+        <!-- <section class="contact-form-section">
+            <div class="container">
+                <div class="form-container">
+                    <div class="form-header">
+                        <h2>Send Me a Message</h2>
+                        <p>Have a project in mind? Let's discuss how we can work together.</p>
+                    </div>
+                    
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a subject</option>
+                                <option value="project">Project Collaboration</option>
+                                <option value="job">Job Opportunity</option>
+                                <option value="consultation">Consultation</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="6" required placeholder="Tell me about your project or inquiry..."></textarea>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="newsletter" name="newsletter">
+                                <span class="checkmark"></span>
+                                I'd like to receive updates about your work and availability
+                            </label>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">
+                                <span class="btn-text">Send Message</span>
+                                <span class="btn-loading" style="display: none;">Sending...</span>
+                            </button>
+                            <button type="reset" class="btn btn-secondary">Clear Form</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- Quick Info -->
+        <section class="quick-info">
+            <div class="container">
+                <div class="info-grid">
+                    <div class="info-card">
+                        <div class="info-icon">🌍</div>
+                        <h3>Location</h3>
+                        <p>Philippines</p>
+                        <small>Available for remote work worldwide</small>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">⏰</div>
+                        <h3>Response Time</h3>
+                        <p>Within 24 hours</p>
+                        <small>Usually much faster!</small>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">💬</div>
+                        <h3>Languages</h3>
+                        <p>English, Filipino</p>
+                        <small>Fluent in both</small>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">🚀</div>
+                        <h3>Availability</h3>
+                        <p>Open to opportunities</p>
+                        <small>Let's discuss what you have in mind</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="contact-cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to Start Something Amazing?</h2>
+                    <p>
+                        Whether you're looking for a developer, have a project idea, or just want to connect, 
+                        I'm here and ready to help bring your vision to life.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="about.html" class="btn btn-primary">About Me</a>
+                        <a href="projects.html" class="btn btn-secondary">View My Work</a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 Justine Bernard J. Lagasca. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/video-loader.js"></script>
     <script src="js/navbar-loader.js"></script>
+    <script src="js/contact-form.js"></script>
 </body>
 </html>
